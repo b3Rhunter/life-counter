@@ -1,6 +1,5 @@
 import React from "react";
 import Fab from '@mui/material/Fab';
-import Zoom from '@mui/material/Zoom';
 
 export default function Form() {
   const [allMemeData, setMemeAllImages] = React.useState({});
@@ -21,21 +20,7 @@ export default function Form() {
     getMemesApi();
   }, []);
 
-  function imghandle(event) {
-    let url = "";
-    if (event.target.files.length !== 0) {
-      url = URL.createObjectURL(event.target.files[0]);
-    }
-    // url = URL.createObjectURL(event.target.files[0]);
 
-    if (url !== "") {
-      setImageState(true);
-      setMeme({
-        ...meme,
-        randomImage: url
-      });
-    }
-  }
   function handleClick() {
     const memesArray = allMemeData.data.memes;
     const randomIndex = Math.floor(Math.random() * memesArray.length);
@@ -44,14 +29,6 @@ export default function Form() {
     setMeme({
       ...meme,
       randomImage: imgUrl
-    });
-  }
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setMeme({
-      ...meme,
-      [name]: value
     });
   }
 

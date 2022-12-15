@@ -25,22 +25,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea } from '@mui/material';
 import Zoom from '@mui/material/Zoom';
 import Fab from '@mui/material/Fab';
 import Modal from '@mui/material/Modal';
-import ETHLogo from './images/ethereumLogo.png';
 import { ethers } from "ethers";
 import Form from "./Form";
-
-const emojiCoin = () => {return(
-<div style={{
-    color: 'transparent',
-    textShadow: '0 0 0 white'
-}}>🪙</div>);} 
 
 const style = {
   position: 'absolute',
