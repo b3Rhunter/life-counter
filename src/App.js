@@ -89,8 +89,8 @@ const dark = createTheme({
 
 function App() {
 
-  const [open, setOpen] = React.useState(false);
-  const [state, setState] = React.useState({
+  const [open, setOpen] = useState(false);
+  const [state, setState] = useState({
     top: false,
     left: false,
     bottom: false,
@@ -101,7 +101,7 @@ function App() {
   const [roll, setRoll] = useState('🎲');
   const [coin, setCoin] = useState('🪙');
 
-  const [openModal, setOpenModal] = React.useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
 
@@ -166,11 +166,12 @@ function App() {
     setOpen(true);
   }
 
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(true);
 
-  window.onload = (event) => {
-    setChecked(true);
-  };
+
+
+
+
 
   return (
    <>
