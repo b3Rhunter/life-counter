@@ -166,12 +166,7 @@ function App() {
     setOpen(true);
   }
 
-  const [checked, setChecked] = useState(true);
-
-
-
-
-
+  const checked = useState(true);
 
   return (
    <>
