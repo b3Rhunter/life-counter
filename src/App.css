@@ -5,6 +5,7 @@ html {
     background-repeat: no-repeat;
     min-height: 100%;
     animation: mymove 5s;
+    animation-duration: 5s;
 }
 
 h1 {
@@ -34,9 +35,7 @@ h2 {
     text-shadow: 0 0 0 red;
 }
 
-.clearfix {
-    overflow: auto;
-  }
+
 
 .glass {
 background: rgba(255, 255, 255, 0.1);
@@ -53,14 +52,6 @@ backdrop-filter: blur(5px);
 border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.MuiAppBar-colorPrimary {
-background: rgba(0, 0, 0, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(0, 0, 0, 0.3);
-}
 
 .btn {
 position: fixed;
@@ -167,6 +158,7 @@ top: 24px;
 
 .rotate {
     animation: rotation 8s infinite linear;
+    animation-duration: 8s;
 }
 
 .werewolves {
@@ -229,9 +221,7 @@ top: 24px;
 
 @media only screen and (max-width: 900px) {
 
-    html {
-        min-height: 110%;
-    }
+
 
     .memeImg {
         max-height: 280px;
