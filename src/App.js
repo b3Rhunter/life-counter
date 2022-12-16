@@ -1,5 +1,5 @@
 import './App.css';
-import * as React from 'react';
+import React from 'react';
 import { useState} from "react";
 import { useMemo } from "react";
 import AppBar from '@mui/material/AppBar';
@@ -96,16 +96,18 @@ function App() {
     bottom: false,
     right: false,
   });
+
   const [lifePointsOne, setLifePointsOne] = useState(20);
   const [lifePointsTwo, setLifePointsTwo] = useState(20);
   const [roll, setRoll] = useState('🎲');
   const [coin, setCoin] = useState('🪙');
-
   const [openModal, setOpenModal] = useState(false);
+  
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
 
   const coinSide = useMemo(() => ["H", "T"], []);
+
   const coinFlip = () => {
     const flip = coinSide[Math.round(Math.random())];
     setCoin(flip);
