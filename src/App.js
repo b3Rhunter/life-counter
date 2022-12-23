@@ -49,7 +49,7 @@ function diceImg() {
 
   return (
     <div>
-      <div style={{height: "98.5vh"}}
+      <div style={{maxHeight: "98.5vh", minHeight: "98.5vh"}}
       class="nes-container with-title is-centered is-dark">
         
       <p class="title">Life Gauge</p>
