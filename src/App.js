@@ -13,12 +13,26 @@ function App() {
 //    setOpen(true);
 //  }
 
+function coinImg() {
+  return (<section style={{margin: "auto", paddingTop: "3px"}} class="icon-list"><i class="nes-icon coin is-medium"></i></section>);
+}
+
+function heads() {
+  return (<section style={{margin: "auto", paddingTop: "5px", paddingLeft: "0.5px"}} class="icon-list"><i class="nes-icon trophy is-medium"></i></section>);
+}
+
+function tails() {
+  return (<section style={{margin: "auto", paddingTop: "3px"}} class="icon-list"><i class="nes-icon close is-medium"></i></section>);
+}
+
   const [lifePointsOne, setLifePointsOne] = useState(20);
   const [lifePointsTwo, setLifePointsTwo] = useState(20);
   const [roll, setRoll] = useState('🎲');
-  const [coin, setCoin] = useState('🪙');
+  const [coin, setCoin] = useState(coinImg);
 
-  const coinSide = useMemo(() => ["H", "T"], []);
+
+
+  const coinSide = useMemo(() => [heads, tails], []);
 
   const coinFlip = () => {
     const flip = coinSide[Math.round(Math.random())];
@@ -26,7 +40,7 @@ function App() {
   };
 
   const dieRoll = () => {
-  setRoll(Math.floor(Math.random() * 20 + 1));
+  setRoll(Math.floor(Math.random() * 20));
   };
 
   return (
@@ -56,13 +70,14 @@ function App() {
       </div>
 
       <div id='reset'>
-      <button id='resetBtn' class="nes-avatar is-rounded is-medium" onClick={() => {setLifePointsOne(20); setLifePointsTwo(20); setRoll('🎲'); setCoin('🪙')}}>↺</button>
+      <button id='resetBtn' class="nes-avatar is-rounded is-medium" onClick={() => {setLifePointsOne(20); setLifePointsTwo(20); setRoll('🎲'); setCoin(coinImg)}}>↺</button>
       </div>
 
+   
       <div id='coin'>
-      <button class="nes-avatar is-rounded is-large" style={{margin: "auto"}} onClick={() => {coinFlip()}}>{coin}</button>
+       <button class="nes-avatar is-rounded is-large" style={{margin: "auto"}} onClick={() => {coinFlip()}}>{coin}</button>
       </div>
-      
+
       <div id='dice'>
       <button class="nes-avatar is-rounded is-large" style={{margin: "auto"}} onClick={() => {dieRoll()}}>{roll}</button>
       </div>
