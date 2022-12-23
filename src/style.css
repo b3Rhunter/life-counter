@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+button:active {
+    color: #000;
+}
+
 #signIn {
     position: absolute;
     top: 15px;
