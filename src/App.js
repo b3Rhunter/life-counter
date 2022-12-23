@@ -25,9 +25,13 @@ function tails() {
   return (<section class="icon-list is-centered"><i class="nes-icon close is-medium center"></i></section>);
 }
 
+function diceImg() {
+  return (<section class="icon-list is-centered"><i class="nes-pokeball"></i></section>)
+}
+
   const [lifePointsOne, setLifePointsOne] = useState(20);
   const [lifePointsTwo, setLifePointsTwo] = useState(20);
-  const [roll, setRoll] = useState('🎲');
+  const [roll, setRoll] = useState(diceImg);
   const [coin, setCoin] = useState(coinImg);
 
 
@@ -70,7 +74,7 @@ function tails() {
       </div>
 
       <div id='reset'>
-      <button id='resetBtn' class="nes-avatar is-rounded is-medium" onClick={() => {setLifePointsOne(20); setLifePointsTwo(20); setRoll('🎲'); setCoin(coinImg)}}>↺</button>
+      <button id='resetBtn' class="nes-avatar is-rounded is-medium" onClick={() => {setLifePointsOne(20); setLifePointsTwo(20); setRoll(diceImg); setCoin(coinImg)}}>↺</button>
       </div>
 
    
