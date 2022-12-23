@@ -14,15 +14,15 @@ function App() {
 //  }
 
 function coinImg() {
-  return (<section style={{margin: "auto", paddingTop: "3px"}} class="icon-list"><i class="nes-icon coin is-medium"></i></section>);
+  return (<section class="icon-list is-centered"><i class="nes-icon coin is-medium center"></i></section>);
 }
 
 function heads() {
-  return (<section style={{margin: "auto", paddingTop: "5px", paddingLeft: "0.5px"}} class="icon-list"><i class="nes-icon trophy is-medium"></i></section>);
+  return (<section class="icon-list is-centered"><i class="nes-icon trophy is-medium center"></i></section>);
 }
 
 function tails() {
-  return (<section style={{margin: "auto", paddingTop: "3px"}} class="icon-list"><i class="nes-icon close is-medium"></i></section>);
+  return (<section class="icon-list is-centered"><i class="nes-icon close is-medium center"></i></section>);
 }
 
   const [lifePointsOne, setLifePointsOne] = useState(20);
@@ -75,11 +75,11 @@ function tails() {
 
    
       <div id='coin'>
-       <button class="nes-avatar is-rounded is-large" style={{margin: "auto"}} onClick={() => {coinFlip()}}>{coin}</button>
+       <button class="nes-avatar is-rounded is-large center" onClick={() => {coinFlip()}}>{coin}</button>
       </div>
 
       <div id='dice'>
-      <button class="nes-avatar is-rounded is-large" style={{margin: "auto"}} onClick={() => {dieRoll()}}>{roll}</button>
+      <button class="nes-avatar is-rounded is-large center" onClick={() => {dieRoll()}}>{roll}</button>
       </div>
 
       </div>
